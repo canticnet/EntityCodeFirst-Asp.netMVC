@@ -1,0 +1,27 @@
+﻿@ViewData["Titre"];
+
+<div class="jumbotron">
+    <h1>@ViewData["Titre"]</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+
+
+
+
+
+    <h2>Mon produit est : @ViewData["Message"];</h2>
+</div>
+<br>
+<br>
+@using (Html.BeginForm("Produit", "Home", FormMethod.Get))
+{
+    <p>
+        ID du Produit recherché: @Html.TextBox("IDProduit")
+        <input type="submit" value="Chercher" />
+    </p>
+}
+
+
